@@ -1,0 +1,1 @@
+# Shopping-Trends-analysis-portfolio
