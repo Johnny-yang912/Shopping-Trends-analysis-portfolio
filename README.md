@@ -104,7 +104,7 @@ print(res["metrics"])   # mae / rmse / r2
 ```
 
 ### 附件
-🔧 工具包 [./utils_churn.py](./utils_shopping.py)  
+🔧 工具包 [./utils_shopping.py](./utils_shopping.py)  
 🔎 使用範例 [./test.ipynb](./test.ipynb)
 
 ## 📝 作者說明
