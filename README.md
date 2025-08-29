@@ -69,6 +69,36 @@
 - 🚀 未來可結合 **長期追蹤數據** 與 **顧客調查**，提升模型準確性，並驗證策略成效。  
 
 ---
+## 🧰 工具包（utils_shopping.py）
+
+- 自動前處理：One-Hot 類別欄、數值欄可選標準化
+- 任務模式：classification（logreg / rf）、regression（linreg / rf）
+- `tune=True`：RandomizedSearchCV 自動調參並印出最佳參數
+
+### 安裝需求
+```bash
+pip install -r requirements.txt
+```
+
+### 使用範例（分類）
+```
+import importlib, utils_shopping
+importlib.reload(utils_shopping)
+from utils_shopping import load_and_clean, split_xy, train_and_eval
+
+df = load_and_clean("Shopping Trends And Customer Behaviour Dataset.csv")
+X, y = split_xy(df, target="Subscription Status")   # 二元或多分類都可以
+res = train_and_eval(X, y, task="classification", model="rf", tune=True, n_iter=20)
+print(res["metrics"])
+```
+
+### 使用範例(迴歸)
+```
+df = load_and_clean("Shopping Trends And Customer Behaviour Dataset.csv")
+X, y = split_xy(df, target="Review Rating")   # 連續數值目標
+res = train_and_eval(X, y, task="regression", model="rf", tune=True, n_iter=20)
+print(res["metrics"])   # mae / rmse / r2
+```
 
 ## 📝 作者說明
 💡 本作品為個人練習與求職作品，資料來源自 **Kaggle**，目的在於展示數據分析與機器學習應用能力。  
