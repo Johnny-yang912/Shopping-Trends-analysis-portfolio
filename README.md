@@ -18,6 +18,14 @@
 - **Notebook**：完整的分析過程與可視化
 - **工具包 (`utils_shopping.py`)**：基本版模組化工具，方便團隊快速重現與擴展分析流程
 ---
+# 會員訂閱預測 Pipeline（補充示範）
+
+此程式為 **購物行為分析專案** 的補充，主要目的在於展示我具備設計與實作 **scikit-learn Pipeline** 的能力。  
+
+此範例展示我能將 **數值、類別與有序特徵** 的前處理與編碼統合，並串接進完整的建模流程。  
+同時以交叉驗證評估模型表現，證明我能將複雜流程包裝成可重現、可維護的架構。  
+
+👉 Pipeline範例：[pipeline_example](pipeline_example.ipynb)
 
 ## 🔍 分析方法
 - **資料來源**：Kaggle - Shopping Trends and Customer Behaviour Dataset  
